@@ -1,0 +1,14 @@
+#!/bin/bash
+
+i=1
+while true;
+do
+    iptables_output=$(iptables -w -L INPUT $i --line-number | awk '{print $2}')
+    if [ -z "$iptables_output" ]
+    then
+	break;
+    else
+	echo $iptables_output 
+    fi
+    i=$(($i+1)) 
+done

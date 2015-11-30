@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+    
+    {% load staticfiles %}
+    {% block content %}
+    <h1 class="page-header">대시보드</h1>
+    <div class="row placeholders">
+	<div class="col-xs-6 col-sm-4 placeholder">
+	    <img data-src="holder.js/200x200?theme=sky&text={{ cpu }}&size=50" class="img-responsive" alt="Generic placeholder thumbnail">
+	    <h4>CPU</h4>
+	    <span class="text-muted">CPU rate</span>
+	</div>
+	<div class="col-xs-6 col-sm-4 placeholder">
+	    <img data-src="holder.js/200x200?theme=vine&text={{ mem|floatformat }}&size=50" class="img-responsive" alt="Generic placeholder thumbnail">
+	    <h4>Memory</h4>
+	    <span class="text-muted">Memory rate</span>
+	</div>
+	<div class="col-xs-6 col-sm-4 placeholder">
+	<img data-src="holder.js/200x200?theme=lava&text={{ disk|floatformat }}&size=50" class="img-responsive" alt="Generic placeholder thumbnail">
+	<h4>Disk</h4>
+	<span class="text-muted">Disk rate</span>
+	</div>
+    </div>
+    {% endblock %}

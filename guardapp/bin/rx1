@@ -1,0 +1,3 @@
+#!/bin/bash
+sar -n DEV 3 1 | sed -n ' 5,6p' | grep eth1 | awk '{print $2}'
+

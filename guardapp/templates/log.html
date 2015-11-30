@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+    {% load staticfiles %}
+    {% block content %}
+    <script>
+    setTimeout("location.reload()",6000)
+    </script>
+    <h1 class="page-header">로그</h1>
+    <div class="well well-sm"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 시간 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   인터페이스 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 출발지 주소 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 목적지 주소 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 프로토콜</b></div>
+    <div class="alert alert-danger">
+	{{ log|linebreaks }}
+    </div>
+    {% endblock %}

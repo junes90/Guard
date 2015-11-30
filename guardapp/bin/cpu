@@ -1,0 +1,5 @@
+#!/bin/bash
+
+val=$(mpstat | tail -1 | awk '{print 100-$12}')
+
+echo $val
